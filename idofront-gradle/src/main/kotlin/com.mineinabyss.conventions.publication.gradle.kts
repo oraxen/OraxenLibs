@@ -3,7 +3,7 @@ plugins {
 }
 
 publishing {
-    addMineInAbyssRepo(project)
+    addOraxenRepo(project)
 
     // Conditional statement to support publishing on multiplatform
     if (components.findByName("java") != null) {
