@@ -9,20 +9,20 @@ pluginManagement {
 
 rootProject.name = "OraxenLibs"
 
-includeBuild("idofront-gradle")
+includeBuild("oraxenlibs-gradle")
 
 val projects = listOf(
-    "idofront-catalog",
-    "idofront-catalog-shaded",
-    "idofront-commands",
-    "idofront-config",
-    "idofront-di",
-    "idofront-features",
-    "idofront-fonts",
-    "idofront-logging",
-    "idofront-nms",
-    "idofront-serializers",
-    "idofront-text-components",
-    "idofront-util",)
+    "oraxenlibs-catalog",
+    "oraxenlibs-catalog-shaded",
+    "oraxenlibs-commands",
+    "oraxenlibs-config",
+    "oraxenlibs-di",
+    "oraxenlibs-features",
+    "oraxenlibs-fonts",
+    "oraxenlibs-logging",
+    "oraxenlibs-nms",
+    "oraxenlibs-serializers",
+    "oraxenlibs-text-components",
+    "oraxenlibs-util",)
 
 include(projects)

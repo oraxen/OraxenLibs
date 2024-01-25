@@ -1,0 +1,6 @@
+name: OraxenLibs
+version: ${plugin_version}
+authors: [Offz, boy0000]
+load: STARTUP
+main: com.boy0000.oraxenlibs.OraxenLibsPlugin
+api-version: '1.20'
