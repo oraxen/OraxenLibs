@@ -45,10 +45,6 @@ class SerializableItemStackSerializer : KSerializer<SerializableItemStack> {
                 crucibleItem = stringShorthand.removePrefix("crucible ")
             )
 
-            stringShorthand.startsWith("oraxen ") -> return BaseSerializableItemStack(
-                oraxenItem = stringShorthand.removePrefix("oraxen ")
-            )
-
             else -> return BaseSerializableItemStack(prefab = stringShorthand)
         }
     }
