@@ -7,7 +7,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = "idofront"
+rootProject.name = "OraxenLibs"
 
 includeBuild("idofront-gradle")
 
