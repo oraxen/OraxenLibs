@@ -14,10 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: MineInAbyss/publish-action@master
+      - uses: oraxen/publish-action@master
         with:
-          maven-metadata-url: https://repo.mineinabyss.com/releases/com/mineinabyss/idofront-util/maven-metadata.xml
-          maven-username: ${{ secrets.MAVEN_PUBLISH_USERNAME }}
-          maven-password: ${{ secrets.MAVEN_PUBLISH_PASSWORD }}
+          maven-metadata-url: https://repo.oraxen.com/releases/com/mineinabyss/idofront-util/maven-metadata.xml
+          maven-username: ${{ secrets.MAVEN_USERNAME }}
+          maven-password: ${{ secrets.MAVEN_PASSWORD }}
           release-files: |
             ${{ github.workspace }}/publish/*.jar
