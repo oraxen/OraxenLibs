@@ -6,6 +6,7 @@ import com.google.common.collect.HashMultimap
 import com.mineinabyss.idofront.di.DI
 import com.mineinabyss.idofront.messaging.logWarn
 import com.mineinabyss.idofront.plugin.Plugins
+import com.mineinabyss.idofront.serialization.mechanics.SerializableMechanic
 import dev.lone.itemsadder.api.CustomStack
 import io.lumine.mythiccrucible.MythicCrucible
 import kotlinx.serialization.EncodeDefault
@@ -40,7 +41,7 @@ typealias SerializableItemStackProperties = BaseSerializableItemStack.Properties
 @Serializable
 data class BaseSerializableItemStack(
     @EncodeDefault(NEVER) val type: @Serializable(with = MaterialByNameSerializer::class) Material? = null,
-    @EncodeDefault(NEVER) val amount: Int? = null,
+    @EncodeDefault(NEVER) private val amount: Int? = null,
     @EncodeDefault(NEVER) val customModelData: Int? = null,
     @EncodeDefault(NEVER) val displayName: Component? = null,
     @EncodeDefault(NEVER) val lore: List<Component>? = null,
@@ -56,6 +57,7 @@ data class BaseSerializableItemStack(
     @EncodeDefault(NEVER) val tag: String? = null,
     @EncodeDefault(NEVER) val crucibleItem: String? = null,
     @EncodeDefault(NEVER) val itemsadderItem: String? = null,
+    @EncodeDefault(NEVER) val mechanics: List<SerializableMechanic>? = null,
 ) {
     private fun Component.removeItalics() =
         Component.text().decoration(TextDecoration.ITALIC, false).build().append(this)
@@ -130,6 +132,11 @@ data class BaseSerializableItemStack(
             attributeModifiers.forEach { newAttributeModifiers.put(it.attribute, it.modifier) }
             meta.attributeModifiers = newAttributeModifiers
         }
+
+        if (!mechanics.isNullOrEmpty() && Properties.MECHANICS !in ignoreProperties) {
+            //mechanics.forEach { it }
+        }
+
         applyTo.itemMeta = meta
         return applyTo
     }
@@ -153,6 +160,7 @@ data class BaseSerializableItemStack(
         POTION_TYPE,
         KNOWLEDGE_BOOK_RECIPES,
         COLOR,
+        MECHANICS,
     }
 
     /** @return whether applying this [SerializableItemStack] to [item] would keep [item] identical. */
