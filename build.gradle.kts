@@ -48,5 +48,6 @@ tasks {
 
     build {
         dependsOn(gradle.includedBuilds.map { it.task(":build") })
+        dependsOn("publishToMavenLocal")
     }
 }

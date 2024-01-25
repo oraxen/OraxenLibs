@@ -1,4 +1,4 @@
-package com.mineinabyss.idofront;
+package com.boy0000.oraxenlibs;
 
 import org.bukkit.plugin.java.JavaPlugin;
 

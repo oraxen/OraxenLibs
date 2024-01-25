@@ -1,6 +1,6 @@
-package com.mineinabyss.idofront.features
+package com.boy0000.oraxenlibs.features
 
-import com.mineinabyss.idofront.di.DI
+import com.boy0000.oraxenlibs.di.DI
 import io.kotest.matchers.nulls.shouldNotBeNull
 import org.junit.jupiter.api.Test
 

@@ -1,4 +1,4 @@
-package com.mineinabyss.idofront.font
+package com.boy0000.oraxenlibs.font
 
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test

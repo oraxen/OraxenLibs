@@ -1,1 +1,0 @@
-package com.mineinabyss.idofront.destructure

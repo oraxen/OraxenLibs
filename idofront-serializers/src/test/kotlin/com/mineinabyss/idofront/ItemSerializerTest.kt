@@ -1,9 +1,9 @@
-package com.mineinabyss.idofront
+package com.boy0000.oraxenlibs
 
 import be.seeseemelk.mockbukkit.MockBukkit
 import com.charleskorn.kaml.Yaml
-import com.mineinabyss.idofront.serialization.SerializableItemStack
-import com.mineinabyss.idofront.serialization.SerializableItemStackSerializer
+import com.boy0000.oraxenlibs.serialization.SerializableItemStack
+import com.boy0000.oraxenlibs.serialization.SerializableItemStackSerializer
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.maps.shouldContainExactly
 import io.kotest.matchers.shouldBe
