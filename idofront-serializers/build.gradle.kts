@@ -13,7 +13,6 @@ dependencies {
     compileOnly(libs.kotlinx.serialization.kaml)
     compileOnly(libs.minecraft.plugin.mythic.dist)
     compileOnly(libs.minecraft.plugin.mythic.crucible)
-    compileOnly(libs.minecraft.plugin.oraxen)
     compileOnly(libs.minecraft.plugin.itemsadder)
     implementation(project(":idofront-util"))
     implementation(project(":idofront-logging"))

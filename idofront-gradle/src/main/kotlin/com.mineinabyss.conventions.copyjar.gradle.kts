@@ -5,7 +5,7 @@ plugins {
     com.github.johnrengelman.shadow
 }
 
-val pluginPath = project.findProperty("plugin_path") as? String
+val pluginPath = project.findProperty("oraxen2_plugin_path") as? String
 
 interface CopyJarExtension {
     // A configurable greeting
@@ -24,6 +24,7 @@ if (pluginPath != null) {
             doNotTrackState("Overwrites the plugin jar to allow for easier reloading")
             val dest = copyJar.destPath.orNull ?: pluginPath
             val jarName = copyJar.jarName.orNull ?: "${project.name}-${project.version}.jar"
+            println("Copying to plugin directory $dest for ${copyJar.jarName.orNull ?: "null"}")
 
             from(findByName("reobfJar") ?: findByName("shadowJar") ?: findByName("jar"))
             into(dest)

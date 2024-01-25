@@ -8,8 +8,6 @@ import com.mineinabyss.idofront.messaging.logWarn
 import com.mineinabyss.idofront.plugin.Plugins
 import dev.lone.itemsadder.api.CustomStack
 import io.lumine.mythiccrucible.MythicCrucible
-import io.th0rgal.oraxen.OraxenPlugin
-import io.th0rgal.oraxen.api.OraxenItems
 import kotlinx.serialization.EncodeDefault
 import kotlinx.serialization.EncodeDefault.Mode.NEVER
 import kotlinx.serialization.Serializable
@@ -57,7 +55,6 @@ data class BaseSerializableItemStack(
     @EncodeDefault(NEVER) val color: @Serializable(with = ColorSerializer::class) Color? = null,
     @EncodeDefault(NEVER) val tag: String? = null,
     @EncodeDefault(NEVER) val crucibleItem: String? = null,
-    @EncodeDefault(NEVER) val oraxenItem: String? = null,
     @EncodeDefault(NEVER) val itemsadderItem: String? = null,
 ) {
     private fun Component.removeItalics() =
@@ -80,18 +77,6 @@ data class BaseSerializableItemStack(
                 } ?: logWarn("No Crucible item found with id $id")
             } else {
                 logWarn("Tried to import Crucible item, but MythicCrucible was not enabled")
-            }
-        }
-
-        // Import ItemStack from Oraxen
-        oraxenItem?.let { id ->
-            if (Plugins.isEnabled<OraxenPlugin>()) {
-                OraxenItems.getItemById(id)?.build()?.let {
-                    applyTo.type = it.type
-                    applyTo.itemMeta = it.itemMeta
-                } ?: logWarn("No Oraxen item found with id $id")
-            } else {
-                logWarn("Tried to import Oraxen item, but Oraxen was not enabled")
             }
         }
 

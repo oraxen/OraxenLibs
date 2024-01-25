@@ -18,6 +18,6 @@ dependencies {
 }
 
 copyJar {
-    jarName.set("idofront-$version.jar")
+    jarName.set("OraxenLibs-$version.jar")
     excludePlatformDependencies.set(false)
 }
