@@ -11,10 +11,8 @@ fastutil = "8.2.2"
 fawe = "2.8.4"
 junit = "5.10.0"
 kaml = "0.57.0"
-kmongo = "4.8.0" #Deprecated due to MongoDB including Kotlin
 kotest = "5.8.0"
 kt-statistics = "1.2.1"
-ktor = "2.3.6"
 logback = "1.4.11"
 mccoroutine = "2.14.0"
 mockbukkit = "3.65.0"
@@ -87,29 +85,12 @@ kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core",
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
 
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
-kotlinx-serialization-cbor = { module = "org.jetbrains.kotlinx:kotlinx-serialization-cbor", version.ref = "serialization" }
-kotlinx-serialization-hocon = { module = "org.jetbrains.kotlinx:kotlinx-serialization-hocon", version.ref = "serialization" }
-kotlinx-serialization-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-serialization-protobuf", version.ref = "serialization" }
 kotlinx-serialization-properties = { module = "org.jetbrains.kotlinx:kotlinx-serialization-properties", version.ref = "serialization" }
 kotlinx-serialization-kaml = { module = "com.charleskorn.kaml:kaml", version.ref = "kaml" }
 
 kotlin-statistics = { module = "org.nield:kotlin-statistics", version.ref = "kt-statistics" }
 
-ktor-serialization = { module = "io.ktor:ktor-serialization", version.ref = "ktor" }
-ktor-serialization-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
-ktor-server-core = { module = "io.ktor:ktor-server-core", version.ref = "ktor" }
-ktor-server-netty = { module = "io.ktor:ktor-server-netty", version.ref = "ktor" }
-
-ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
-ktor-client-js = { module = "io.ktor:ktor-client-js", version.ref = "ktor" }
-ktor-client-json = { module = "io.ktor:ktor-client-json", version.ref = "ktor" }
-ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktor" }
-ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
-ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
-ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
-
 logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
-kmongo-coroutine-serialization = { module = "org.litote.kmongo:kmongo-coroutine-serialization", version.ref = "kmongo" }
 
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 
@@ -124,33 +105,21 @@ junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "jun
 minecraft = ["minecraft-headlib-api", "minecraft-mccoroutine", "minecraft-anvilgui"]
 exposed = ["exposed-core", "exposed-dao", "exposed-jdbc", "exposed-javatime", "sqlite-jdbc"]
 platform = [
-    "minecraft-headlib-core",
     "minecraft-mccoroutine-core",
     "minecraft-anvilgui",
-    "reflections",
-    "exposed-core",
-    "exposed-dao",
-    "exposed-jdbc",
-    "exposed-javatime",
-    "sqlite-jdbc",
+    #"reflections",
+    #"exposed-core",
+    #"exposed-dao",
+    #"exposed-jdbc",
+    #"exposed-javatime",
+    #"sqlite-jdbc",
     "kotlin-stdlib",
     "kotlin-reflect",
     "kotlinx-coroutines",
     "kotlinx-serialization-json",
-    "kotlinx-serialization-cbor",
-    "kotlinx-serialization-hocon",
-    "kotlinx-serialization-protobuf",
     "kotlinx-serialization-properties",
     "kotlinx-serialization-kaml",
-    "kotlin-statistics",
-    "ktor-serialization",
-    "ktor-serialization-json",
-    "ktor-client-core",
-    "ktor-client-cio",
-    "ktor-client-logging",
-    "ktor-client-content-negotiation",
     "logback-classic",
-    "kmongo-coroutine-serialization",
     "creative-api",
     "creative-serializer-minecraft",
     "creative-server",

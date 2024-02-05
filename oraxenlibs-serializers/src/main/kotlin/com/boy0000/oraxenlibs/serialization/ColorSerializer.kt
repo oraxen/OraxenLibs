@@ -1,6 +1,6 @@
 package com.boy0000.oraxenlibs.serialization
 
-import com.mineinabyss.idofront.util.toColor
+import com.boy0000.oraxenlibs.util.toColor
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
