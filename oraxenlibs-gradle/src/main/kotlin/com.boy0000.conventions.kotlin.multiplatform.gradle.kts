@@ -6,7 +6,7 @@ plugins {
 
 repositories {
     mavenCentral()
-    maven("https://repo.mineinabyss.com/releases")
+    maven("https://repo.oraxen.com/releases")
 }
 
 val libs = the<LibrariesForLibs>()

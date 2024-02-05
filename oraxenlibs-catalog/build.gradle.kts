@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.util.prefixIfNot
 
 plugins {
     `version-catalog`
-    id("com.mineinabyss.conventions.publication")
+    id("com.boy0000.conventions.publication")
 }
 
 catalog {
@@ -11,11 +11,11 @@ catalog {
         // Add aliases for all our conventions plugins
         rootProject.file("oraxenlibs-gradle/src/main/kotlin").list()?.forEach { name ->
             val id = name.removeSuffix(".gradle.kts")
-            plugin(id.removePrefix("com.mineinabyss.conventions").prefixIfNot("mia"), id).version(version.toString())
+            plugin(id.removePrefix("com.boy0000.conventions").prefixIfNot("boy"), id).version(version.toString())
         }
         // Add all idofront projects to the catalog
         rootProject.file(".").list()?.filter { it.startsWith("oraxenlibs") }?.forEach { name ->
-            library(name, "com.mineinabyss:$name:$version")
+            library(name, "com.boy0000:$name:$version")
         }
         bundle(
             "oraxenlibs-core", listOf(

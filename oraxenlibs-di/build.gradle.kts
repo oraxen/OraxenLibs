@@ -1,6 +1,6 @@
 plugins {
-    id("com.mineinabyss.conventions.kotlin.multiplatform")
-    id("com.mineinabyss.conventions.publication")
+    id("com.boy0000.conventions.kotlin.multiplatform")
+    id("com.boy0000.conventions.publication")
 }
 
 kotlin {

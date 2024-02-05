@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     java
     alias(libs.plugins.kotlin.jvm) apply false
-    id("com.mineinabyss.conventions.autoversion")
+    id("com.boy0000.conventions.autoversion")
     alias(libs.plugins.dependencyversions)
 }
 
