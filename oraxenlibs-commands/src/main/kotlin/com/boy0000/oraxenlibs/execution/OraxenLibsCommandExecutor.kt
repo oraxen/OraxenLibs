@@ -1,4 +1,4 @@
-package com.boy0000.oraxenlibs.commands.execution
+package com.boy0000.oraxenlibs.execution
 
 import com.boy0000.oraxenlibs.commands.entrypoint.CommandDSLEntrypoint
 import org.bukkit.command.Command
@@ -9,7 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin
 /**
  * Manages linking spigot's [CommandExecutor.onCommand] events to a [CommandDSLEntrypoint] inside
  */
-abstract class IdofrontCommandExecutor : CommandExecutor {
+abstract class OraxenLibsCommandExecutor : CommandExecutor {
     abstract val commands: CommandDSLEntrypoint
 
     /** Gets the command or send the player a message if it isn't found */

@@ -9,7 +9,7 @@ private val mm = MiniMessage.miniMessage()
 private val plainComponentSerializer = PlainTextComponentSerializer.plainText()
 
 /** Parses this String to a [Component] with MiniMessage and an optional TagResolver */
-fun String.miniMsg(tagResolver: TagResolver = IdofrontTextComponents.globalResolver): Component =
+fun String.miniMsg(tagResolver: TagResolver = OraxenTextComponents.globalResolver): Component =
     mm.deserialize(this, tagResolver)
 
 /** Serializes this [Component] to a String with MiniMessage */
@@ -19,5 +19,5 @@ fun Component.serialize(): String = mm.serialize(this)
 fun Component.toPlainText(): String = plainComponentSerializer.serialize(this)
 
 /** Removes all supported tags from a string, with an optional TagResolver input */
-fun String.stripTags(tagResolver: TagResolver = IdofrontTextComponents.globalResolver): String =
+fun String.stripTags(tagResolver: TagResolver = OraxenTextComponents.globalResolver): String =
     mm.stripTags(this, tagResolver)

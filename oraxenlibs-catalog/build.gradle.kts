@@ -13,7 +13,7 @@ catalog {
             val id = name.removeSuffix(".gradle.kts")
             plugin(id.removePrefix("com.boy0000.conventions").prefixIfNot("boy"), id).version(version.toString())
         }
-        // Add all idofront projects to the catalog
+        // Add all oraxenlibs projects to the catalog
         rootProject.file(".").list()?.filter { it.startsWith("oraxenlibs") }?.forEach { name ->
             library(name, "com.boy0000:$name:$version")
         }

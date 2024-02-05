@@ -1,7 +1,7 @@
 package com.boy0000.oraxenlibs.features
 
 import com.boy0000.oraxenlibs.commands.arguments.optionArg
-import com.boy0000.oraxenlibs.commands.execution.IdofrontCommandExecutor
+import com.boy0000.oraxenlibs.execution.OraxenLibsCommandExecutor
 import com.boy0000.oraxenlibs.messaging.error
 import com.boy0000.oraxenlibs.messaging.logError
 import com.boy0000.oraxenlibs.messaging.logSuccess
@@ -14,8 +14,8 @@ import org.bukkit.command.TabCompleter
 abstract class FeatureManager<T : FeatureDSL>(
     createContext: () -> T,
 ) : FeatureWithContext<T>(createContext) {
-    val commandExecutor: IdofrontCommandExecutor by lazy {
-        object : IdofrontCommandExecutor(), TabCompleter {
+    val commandExecutor: OraxenLibsCommandExecutor by lazy {
+        object : OraxenLibsCommandExecutor(), TabCompleter {
             override val commands = commands(context.plugin) {
                 context.mainCommandProvider(this) {
                     mainCommandExtras.forEach { it() }

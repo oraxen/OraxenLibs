@@ -1,12 +1,11 @@
 package com.boy0000.oraxenlibs.config
 
 import kotlinx.serialization.serializer
-import org.bukkit.plugin.Plugin
 import java.nio.file.Path
 
-typealias IdofrontConfig<T> = Config<T>
-typealias IdofrontFormat = Format
-typealias IdofrontConfigFormats = ConfigFormats
+typealias OraxenLibsConfig<T> = Config<T>
+typealias OraxenLibsFormat = Format
+typealias OraxenLibsConfigFormat = ConfigFormats
 
 inline fun <reified T> config(
     name: String,

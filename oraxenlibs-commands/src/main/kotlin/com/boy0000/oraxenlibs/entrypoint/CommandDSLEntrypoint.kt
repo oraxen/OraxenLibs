@@ -7,7 +7,7 @@ import com.boy0000.oraxenlibs.commands.children.ChildSharing
 import com.boy0000.oraxenlibs.commands.children.ChildSharingManager
 import com.boy0000.oraxenlibs.commands.children.CommandCreating
 import com.boy0000.oraxenlibs.commands.execution.CommandExecutionFailedException
-import com.boy0000.oraxenlibs.commands.execution.IdofrontCommandExecutor
+import com.boy0000.oraxenlibs.execution.OraxenLibsCommandExecutor
 import com.boy0000.oraxenlibs.messaging.error
 import org.bukkit.command.CommandSender
 import org.bukkit.command.TabCompleter
@@ -18,14 +18,14 @@ import org.bukkit.plugin.java.JavaPlugin
 // and a list of top level commands needs to exist to be registered with plugin.getCommand.setExecutor.
 /**
  * A class for holding a list of top level commands. One instance is created during plugin startup through
- * [IdofrontCommandExecutor.commands].
+ * [OraxenLibsCommandExecutor.commands].
  *
- * The class itself is accessed in [IdofrontCommandExecutor.onCommand], which will find the applicable command and
+ * The class itself is accessed in [OraxenLibsCommandExecutor.onCommand], which will find the applicable command and
  * [execute] a new instance of it with the sender and their arguments.
  */
 class CommandDSLEntrypoint(
     private val plugin: JavaPlugin,
-    private val commandExecutor: IdofrontCommandExecutor
+    private val commandExecutor: OraxenLibsCommandExecutor
 ) : CommandDSLElement,
     ChildSharing by ChildSharingManager(),
     CommandCreating {
